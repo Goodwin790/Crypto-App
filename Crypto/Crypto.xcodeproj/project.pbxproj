@@ -26,6 +26,10 @@
 		C138491C29A539520079280F /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C138491B29A539520079280F /* StatisticView.swift */; };
 		C138491E29A543440079280F /* HomeStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C138491D29A543440079280F /* HomeStatsView.swift */; };
 		C159C45129A889B70070A7CE /* CoinLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C159C45029A889B70070A7CE /* CoinLogoView.swift */; };
+		C165291129AB4C1F00F55DB6 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C165291029AB4C1F00F55DB6 /* DetailView.swift */; };
+		C165291329AE0CE100F55DB6 /* CoinDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C165291229AE0CE000F55DB6 /* CoinDetailModel.swift */; };
+		C165291529AE1BA500F55DB6 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C165291429AE1BA500F55DB6 /* DetailViewModel.swift */; };
+		C165291729AE1BFA00F55DB6 /* CoinDetailDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C165291629AE1BFA00F55DB6 /* CoinDetailDataService.swift */; };
 		C190E24129A3C8CF0046ED47 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C190E24029A3C8CF0046ED47 /* NetworkingManager.swift */; };
 		C190E24429A4C0B90046ED47 /* CoinImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C190E24329A4C0B90046ED47 /* CoinImageView.swift */; };
 		C190E24629A4C3D80046ED47 /* CoinImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C190E24529A4C3D70046ED47 /* CoinImageService.swift */; };
@@ -62,6 +66,10 @@
 		C138491B29A539520079280F /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
 		C138491D29A543440079280F /* HomeStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStatsView.swift; sourceTree = "<group>"; };
 		C159C45029A889B70070A7CE /* CoinLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinLogoView.swift; sourceTree = "<group>"; };
+		C165291029AB4C1F00F55DB6 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		C165291229AE0CE000F55DB6 /* CoinDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailModel.swift; sourceTree = "<group>"; };
+		C165291429AE1BA500F55DB6 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		C165291629AE1BFA00F55DB6 /* CoinDetailDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailDataService.swift; sourceTree = "<group>"; };
 		C190E24029A3C8CF0046ED47 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		C190E24329A4C0B90046ED47 /* CoinImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageView.swift; sourceTree = "<group>"; };
 		C190E24529A4C3D70046ED47 /* CoinImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageService.swift; sourceTree = "<group>"; };
@@ -152,6 +160,7 @@
 			children = (
 				C10659BD299DFB1800C5CD35 /* ViewModels */,
 				C10659BC299DFB0900C5CD35 /* Views */,
+				C165290D29AB4AF400F55DB6 /* Detail */,
 				C10659AB299D4AE500C5CD35 /* ContentView.swift */,
 			);
 			path = Home;
@@ -201,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				C10659C7299E1F9000C5CD35 /* CoinModel.swift */,
+				C165291229AE0CE000F55DB6 /* CoinDetailModel.swift */,
 				C138491929A5368E0079280F /* StatisticModel.swift */,
 				C1D22D6629A607A30039F8B9 /* MarketDataModel.swift */,
 				C1E71DDC29A8E5A500BF1817 /* PortfolioContainer.xcdatamodeld */,
@@ -212,11 +222,37 @@
 			isa = PBXGroup;
 			children = (
 				C10659D3299F5C0400C5CD35 /* CoinDataService.swift */,
+				C165291629AE1BFA00F55DB6 /* CoinDetailDataService.swift */,
 				C190E24529A4C3D70046ED47 /* CoinImageService.swift */,
 				C1E71DDF29A8E69700BF1817 /* PortfolioDataService.swift */,
 				C1D22D6829A763D20039F8B9 /* MarketDataService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		C165290D29AB4AF400F55DB6 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				C165290E29AB4BA800F55DB6 /* ViewModels */,
+				C165290F29AB4BCB00F55DB6 /* Views */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		C165290E29AB4BA800F55DB6 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C165291429AE1BA500F55DB6 /* DetailViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C165290F29AB4BCB00F55DB6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C165291029AB4C1F00F55DB6 /* DetailView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		C190E23F29A3C8800046ED47 /* Utilities */ = {
@@ -325,6 +361,7 @@
 				C138491829A522150079280F /* UIApplication.swift in Sources */,
 				C10659B9299D51BC00C5CD35 /* Color.swift in Sources */,
 				C190E24129A3C8CF0046ED47 /* NetworkingManager.swift in Sources */,
+				C165291129AB4C1F00F55DB6 /* DetailView.swift in Sources */,
 				C1E71DE329A9F6B000BF1817 /* HapticManager.swift in Sources */,
 				C190E24C29A517EC0046ED47 /* SearchBarView.swift in Sources */,
 				C10659C5299E048500C5CD35 /* CircleButtonAnimationView.swift in Sources */,
@@ -337,7 +374,10 @@
 				C1D22D6B29A79FC10039F8B9 /* PortfolioView.swift in Sources */,
 				C190E24629A4C3D80046ED47 /* CoinImageService.swift in Sources */,
 				C10659C8299E1F9000C5CD35 /* CoinModel.swift in Sources */,
+				C165291329AE0CE100F55DB6 /* CoinDetailModel.swift in Sources */,
 				C190E24A29A4E1640046ED47 /* LocaleFileManager.swift in Sources */,
+				C165291729AE1BFA00F55DB6 /* CoinDetailDataService.swift in Sources */,
+				C165291529AE1BA500F55DB6 /* DetailViewModel.swift in Sources */,
 				C1E71DE029A8E69700BF1817 /* PortfolioDataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
